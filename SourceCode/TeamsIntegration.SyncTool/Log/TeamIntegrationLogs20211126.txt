@@ -1,0 +1,11 @@
+2021-11-26 03:37:30.238 +02:00 [INF] Starting up the service
+2021-11-26 11:13:37.367 +02:00 [INF] Starting up the service
+2021-11-26 13:32:46.481 +02:00 [INF] Starting up the service
+2021-11-26 13:35:39.261 +02:00 [INF] Starting up the service
+2021-11-26 13:59:27.183 +02:00 [INF] Starting up the service
+2021-11-26 13:59:56.351 +02:00 [INF] Starting up the service
+2021-11-26 14:17:49.862 +02:00 [INF] Starting up the service
+2021-11-26 14:45:29.210 +02:00 [INF] Starting up the service
+2021-11-26 21:25:46.805 +02:00 [INF] Starting up the service
+2021-11-26 21:44:13.417 +02:00 [INF] Starting up the service
+2021-11-26 22:00:33.584 +02:00 [INF] Starting up the service
