@@ -66,12 +66,14 @@ namespace TeamsIntegration.SyncTool
 
                     #region DI
                     services.AddSingleton(oganizations);
-                    services.AddScoped<IMappingBusiness, MappingBusiness>();
-                    services.AddScoped<ITeamBusinessLayer, TeamBusinessLayer>();
-                    services.AddScoped<ILMSBusinessLayer, LMSBusinessLayer>();
+                    services.AddSingleton<IMappingBusiness, MappingBusiness>();
+                    services.AddSingleton<ITeamBusinessLayer, TeamBusinessLayer>();
+                    services.AddSingleton<ILMSBusinessLayer, LMSBusinessLayer>();
+
+
                     #endregion
                     services.AddDbContext<TeamDBContext>(options =>
-                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                   options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
                                         services.AddHostedService<Worker>();
 
                    
