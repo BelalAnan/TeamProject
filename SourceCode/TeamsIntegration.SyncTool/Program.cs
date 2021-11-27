@@ -76,7 +76,7 @@ namespace TeamsIntegration.SyncTool
                     #endregion
                     services.AddDbContext<TeamDBContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-                    services.AddSingleton(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
+                    services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
 
                     services.AddHostedService<Worker>();
 

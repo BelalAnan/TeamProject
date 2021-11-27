@@ -22,6 +22,19 @@
           "lib/net5.0/Azure.Core.dll": {}
         }
       },
+      "EFCore.DbContextFactory/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/EFCore.DbContextFactory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/EFCore.DbContextFactory.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -1516,6 +1529,21 @@
         "lib/netstandard2.0/Azure.Core.dll",
         "lib/netstandard2.0/Azure.Core.xml",
         "pkgicon.png"
+      ]
+    },
+    "EFCore.DbContextFactory/2.0.0": {
+      "sha512": "edaj+vGM0Nn4Gelg8/NETdA/Q9TyqdYVpkXiuKLx2ZwHmTgr29DHIoXhantRWMIi/+xU7mcuwSoZdf4EU5ZjoA==",
+      "type": "package",
+      "path": "efcore.dbcontextfactory/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "efcore.dbcontextfactory.2.0.0.nupkg.sha512",
+        "efcore.dbcontextfactory.nuspec",
+        "lib/netstandard2.0/EFCore.DbContextFactory.dll",
+        "lib/netstandard2.0/EFCore.DbContextFactory.xml",
+        "lib/netstandard2.1/EFCore.DbContextFactory.dll",
+        "lib/netstandard2.1/EFCore.DbContextFactory.xml"
       ]
     },
     "Humanizer.Core/2.8.26": {
@@ -4672,6 +4700,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "EFCore.DbContextFactory >= 2.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.12",
@@ -4733,6 +4762,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "EFCore.DbContextFactory": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.12, )"

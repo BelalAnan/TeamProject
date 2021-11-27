@@ -6,3 +6,85 @@
 2021-11-27 14:22:04.192 +02:00 [INF] Starting up the service
 2021-11-27 14:24:13.883 +02:00 [INF] Starting up the service
 2021-11-27 14:28:21.270 +02:00 [INF] Starting up the service
+2021-11-27 15:40:23.145 +02:00 [INF] Starting up the service
+2021-11-27 15:44:10.827 +02:00 [INF] Starting up the service
+2021-11-27 15:45:17.725 +02:00 [INF] Starting up the service
+2021-11-27 15:55:19.452 +02:00 [INF] Starting up the service
+2021-11-27 16:03:08.687 +02:00 [INF] Starting up the service
+2021-11-27 18:22:28.324 +02:00 [INF] Starting up the service
+2021-11-27 18:24:50.512 +02:00 [INF] Starting up the service
+2021-11-27 18:26:41.592 +02:00 [INF] Starting up the service
+2021-11-27 18:29:38.929 +02:00 [INF] Starting up the service
+2021-11-27 18:31:22.295 +02:00 [INF] Starting up the service
+2021-11-27 18:38:29.602 +02:00 [INF] Starting up the service
+2021-11-27 18:49:30.368 +02:00 [INF] Starting up the service
+2021-11-27 18:51:57.534 +02:00 [INF] Starting up the service
+2021-11-27 18:54:37.844 +02:00 [INF] Starting up the service
+2021-11-27 19:21:12.739 +02:00 [INF] Starting up the service
+2021-11-27 19:26:36.659 +02:00 [INF] Starting up the service
+2021-11-27 19:27:09.630 +02:00 [INF] Starting up the service
+2021-11-27 19:31:53.525 +02:00 [INF] Starting up the service
+2021-11-27 19:32:35.761 +02:00 [ERR] Failed executing DbCommand (33ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Guid), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TeamAppsInstallation] ([AppId], [TeamId], [IsInstalled])
+VALUES (@p0, @p1, @p2);
+2021-11-27 19:59:59.491 +02:00 [INF] Starting up the service
+2021-11-27 20:06:37.014 +02:00 [INF] Starting up the service
+2021-11-27 20:11:12.643 +02:00 [INF] Starting up the service
+2021-11-27 20:11:57.895 +02:00 [ERR] Failed executing DbCommand (157ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Guid), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [TeamAppsInstallation] ([AppId], [TeamId], [IsInstalled])
+VALUES (@p0, @p1, @p2);
+2021-11-27 20:11:58.071 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'TeamsIntegration.Data.TeamDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_TeamAppsInstallation'. Cannot insert duplicate key in object 'dbo.TeamAppsInstallation'. The duplicate key value is (00000000-0000-0000-0000-000000000000, 111-2222-3333-4444).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:989dae40-65df-406b-8122-7b56aa11255b
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_TeamAppsInstallation'. Cannot insert duplicate key in object 'dbo.TeamAppsInstallation'. The duplicate key value is (00000000-0000-0000-0000-000000000000, 111-2222-3333-4444).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:989dae40-65df-406b-8122-7b56aa11255b
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-11-27 20:34:19.972 +02:00 [INF] Starting up the service

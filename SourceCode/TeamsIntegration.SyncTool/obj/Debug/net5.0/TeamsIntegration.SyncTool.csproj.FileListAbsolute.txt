@@ -354,3 +354,4 @@ D:\TeamProject\TeamProject\SourceCode\TeamsIntegration.SyncTool\obj\Debug\net5.0
 D:\TeamProject\TeamProject\SourceCode\TeamsIntegration.SyncTool\obj\Debug\net5.0\ref\TeamsIntegration.SyncTool.dll
 D:\TeamProject\TeamProject\SourceCode\TeamsIntegration.SyncTool\obj\Debug\net5.0\TeamsIntegration.SyncTool.pdb
 D:\TeamProject\TeamProject\SourceCode\TeamsIntegration.SyncTool\obj\Debug\net5.0\TeamsIntegration.SyncTool.genruntimeconfig.cache
+D:\TeamProject\TeamProject\SourceCode\TeamsIntegration.SyncTool\bin\Debug\net5.0\EFCore.DbContextFactory.dll

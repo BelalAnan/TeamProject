@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7MWUz1MCoZIm2Zj5jNQ/v0DJn3zH5V+UM+uxfg5wgmDp9PB6N27u1WFrzzKkurEX9A8jwlBYZIMdzK4cxIc8ew==",
+  "dgSpecHash": "r3XVeAplAWDj0F3+JYziR6CY9OP3hEfYGEo5fQU9XM8/DL4T3JTI3r+876Xs3OUF4aTvUwSpraih8WHkY1UyYQ==",
   "success": true,
   "projectFilePath": "D:\\TeamProject\\TeamProject\\SourceCode\\TeamsIntegration.SyncTool\\TeamsIntegration.SyncTool.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\azure.core\\1.18.0\\azure.core.1.18.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\efcore.dbcontextfactory\\2.0.0\\efcore.dbcontextfactory.2.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

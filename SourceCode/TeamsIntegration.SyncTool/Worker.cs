@@ -18,6 +18,8 @@ using Microsoft.Extensions.DependencyInjection;
 using TeamsIntegration.Data;
 using Microsoft.EntityFrameworkCore;
 using TeamsIntegration.SyncTool.Business;
+using TeamsIntegration.SyncTool.Services.Contracts;
+using TeamsIntegration.Data.models;
 
 namespace TeamsIntegration.SyncTool
 {
@@ -25,13 +27,15 @@ namespace TeamsIntegration.SyncTool
     {
         private readonly ILogger<Worker> _logger;
         private readonly List<Organizations> _orgs;
+        private readonly IServiceScopeFactory _serviceScopeFactory;
         private readonly IMappingBusiness _mappingBusiness;
 
-        public Worker(ILogger<Worker> logger, List<Organizations> orgs, IMappingBusiness mappingBusiness)
+        public Worker(ILogger<Worker> logger, List<Organizations> orgs, IMappingBusiness mappingBusiness, IServiceScopeFactory serviceScopeFactory)
         {
             _logger = logger;
             _orgs = orgs;
             _mappingBusiness = mappingBusiness;
+            _serviceScopeFactory = serviceScopeFactory;
 
 
 
@@ -57,8 +61,10 @@ namespace TeamsIntegration.SyncTool
             {
          
                 await StartSync();
-                int timerinMiliSeconds = Convert.ToInt32( AuthenticationConfig.Get("TimerinMiliSeconds"));
-                await Task.Delay(timerinMiliSeconds, stoppingToken);
+                //  int timerinMiliSeconds = Convert.ToInt32( AuthenticationConfig.Get("TimerinMiliSeconds"));
+                //await Task.Delay(timerinMiliSeconds, stoppingToken);
+                await Task.Delay(5000, stoppingToken);
+
             }
         }
 
@@ -77,13 +83,30 @@ namespace TeamsIntegration.SyncTool
 
         private async void SyncCreatedTeams(Organizations organization)
         {
-            Console.WriteLine(string.Format("---Tool Started SyncCreatedTeams a login token {0}", organization.loginToken));
-          await  _mappingBusiness.CheckMappingLMSandEducational();
-            //var ProtectedApiCallHelper = await RunAsync();
-           // await ProtectedApiCallHelper.CreateTeam();
-            // 1- Call LMS Api
-           // var LmsCourses =await _businessLayer.GetLMSCourses();
+          
 
+            Console.WriteLine(string.Format("---Tool Started SyncCreatedTeams a login token {0}", organization.loginToken));
+
+            //using (var scope = _serviceScopeFactory.CreateScope())
+            //{
+            //    // You can ask for any service here and DI will resolve it and give you back service instance
+            //  var  _context = scope.ServiceProvider.GetRequiredService<TeamDBContext>();
+
+            //    await _context.TeamAppsInstallation.AddAsync(new TeamAppInstallation()
+            //    {
+            //        AppId = "111-2222-3333-4444",
+            //        TeamId = Guid.NewGuid(),
+            //        IsInstalled = false
+
+            //    });
+            //    await _context.SaveChangesAsync();
+            //}
+            await _mappingBusiness.CheckMappingLMSandEducational();
+                //var ProtectedApiCallHelper = await RunAsync();
+                // await ProtectedApiCallHelper.CreateTeam();
+                // 1- Call LMS Api
+                // var LmsCourses =await _businessLayer.GetLMSCourses();
+            
             Console.WriteLine();
         }
 
