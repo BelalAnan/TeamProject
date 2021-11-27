@@ -14,6 +14,8 @@ using TeamsIntegration.Common.Helper;
 using TeamsIntegration.Common.Utilities;
 using TeamsIntegration.Data;
 using TeamsIntegration.SyncTool.Business;
+using TeamsIntegration.SyncTool.Services.Contracts;
+using TeamsIntegration.SyncTool.Services.Repos;
 
 namespace TeamsIntegration.SyncTool
 {
@@ -74,7 +76,9 @@ namespace TeamsIntegration.SyncTool
                     #endregion
                     services.AddDbContext<TeamDBContext>(options =>
                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-                                        services.AddHostedService<Worker>();
+                    services.AddSingleton(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
+
+                    services.AddHostedService<Worker>();
 
                    
 
